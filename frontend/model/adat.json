@@ -1,0 +1,14 @@
+{
+    "nevek":[
+        {
+            "vnev":"Sonka",
+            "knev": "Dániel",
+            "szul":"1969-01-22"
+        },
+        {
+            "vnev":"Kalos",
+            "knev": "Ferenc",
+            "szul":"1980-07-15"
+        }
+    ]
+}

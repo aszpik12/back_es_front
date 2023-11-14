@@ -1,19 +1,27 @@
 import DataService from "../model/DataService.js";
 
-const ALAPVEGPONT = "http://localhost:8000/";
-class Controller{
-    constructor(){
-        this.dataService= new DataService()
-        this.dataService.getAxisData("http://localhost:8000/writers", this.megjelenit);
-        this.dataService.getAxisData("http://localhost:8000/writers", {
-            "nev": "Pistaaaa",
-            "szul": 1666
-        });
-    }
+class Controller {
+  constructor() {
+    this.dataService = new DataService();
 
-    megjelenit(lista){
-        console.log(lista)
-        //new AdatView(lista, $('.lista'))
-    }
+    this.dataService.getAxisData("api/writer", this.megjelenit);
+    this.dataService.postAxisData("api/writer", {
+      nev: "Pista",
+      szul: 1666,
+    });
+   
+    this.dataService.putAxisData("api/writer", {
+      id: 1,
+      nev: "Gergő",
+      szul: 2006,
+    });
+    this.dataService.deletetAxisData("api/writer", 2);
+  }
+
+  megjelenit(lista) {
+    console.log(lista);
+    //new AdatView(lista, $('.lista'))
+  }
+  
 }
-export default Controller
+export default Controller;
