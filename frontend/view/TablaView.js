@@ -1,16 +1,15 @@
-class TablaView{
-constructor(lista, szuloElem){
+import DataService from "../model/DataService.js";
 
-    let kiir = `<table>`;
+class TablaView {
+  constructor(lista, szuloElem) {
+    szuloElem.append(`<table class="table">`);
+    this.tablaElem = szuloElem.children("table");
+
+    let kiir = "";
     for (let i = 0; i < lista.length; i++) {
-      kiir += `<tr>
-                <td>${lista[i].megj}</td>
-                <td>${lista[i].placeholder}</td>
-                </tr>`;
+      const elem = this.lista[i];
+      new TablaViewSor(elem, this.tablaElem);
     }
-    kiir += `</table>`;
-    console.log(kiir)
-    szuloElem.html(kiir)
   }
 }
-export default TablaView
+export default TablaView;

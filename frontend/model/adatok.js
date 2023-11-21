@@ -1,14 +1,6 @@
 export const adatLeiras = {
-  vnev: {
-    megj: "Vezetéknév",
-    tipus: "text",
-    placeholder: "Valaki vagyok",
-    pattern: "[A-Z][a-z]{2,15}",
-    szoveg: "Legjobb 3 betű, a névnek nagybetűvel kell kezdődnie!",
-    requre: true,
-  },
-  knev: {
-    megj: "Keresznév",
+  nev: {
+    megj: "név",
     tipus: "text",
     placeholder: "Valaki vagyok",
     pattern: "[A-Z][a-z]{2,15}",
